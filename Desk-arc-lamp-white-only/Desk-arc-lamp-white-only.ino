@@ -1,3 +1,12 @@
+//This project is for an electronics workbench lighing set up. The electronics workbench will use an ATX power supply.
+//As ATX power supplies require 10 watts of draw before they will turn on as a safety precation, this lighting setup will use those 10 watts in a productive manner.
+//The plan is to use an Adafruit 5v Pro along with two sets of RGBW LEDs, a 1 meter 30 light strand and a 24 light ring on a magnifier.
+//Each will be turned on independently by one of two buttons that will be connected to the Trinket. I may also connect a 5v cooling fan.
+//Pin 6 will be the control pin for the 30 LED strand. The button will be on Pin 12.
+//Pin 5 will be the control pin for the 24 LED ring. The button will be on Pin 10
+//The sequence will be, when a button is pushed, the light controlled by it will cycle through all its colors before going to a slightly blueish white.
+
+
 #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
   #include <avr/power.h>
