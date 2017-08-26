@@ -25,7 +25,7 @@
 
 #define PIN 6
 #define NUM_LEDS 24
-#define BRIGHTNESS 50
+#define BRIGHTNESS 50 //default value is 50
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRBW + NEO_KHZ800);
 
@@ -49,6 +49,7 @@ void loop()
   //Code will go in here that periodically checks for things
 }
 
+// Simple function for iterating through colors on the led strip
 void colorAnimation()
 {
   colorWipe(strip.Color(255, 0, 0), 50); // Red
@@ -66,4 +67,6 @@ void colorWipe(uint32_t c, uint8_t wait) {
     strip.show();
     delay(wait);
   }
+
+
 }
