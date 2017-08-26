@@ -12,11 +12,13 @@
   #include <avr/power.h>
 #endif
 
+
+
 #define PIN 6
 
 #define NUM_LEDS 24
 
-#define BRIGHTNESS 50
+#define BRIGHTNESS 50 //default value is 50
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRBW + NEO_KHZ800);
 
@@ -33,6 +35,9 @@ void setup() {
 }
 
 void loop() {
+
+
+  
   // Some example procedures showing how to display to the pixels:
   colorWipe(strip.Color(255, 0, 0), 50); // Red
   colorWipe(strip.Color(0, 255, 0), 50); // Green
@@ -54,5 +59,7 @@ void colorWipe(uint32_t c, uint8_t wait) {
     strip.show();
     delay(wait);
   }
+
+
 }
 
