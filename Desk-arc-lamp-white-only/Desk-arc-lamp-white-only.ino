@@ -7,6 +7,13 @@
 //The sequence will be, when a button is pushed, the light controlled by it will cycle through all its colors before going to a slightly blueish white.
 
 
+/*
+ * These '#define' statements are called preprocessor directives.
+ * They happen before your code is compiled.
+ * Essentially the preprocessor just replaces one thing with another in your
+ * code. So '#define PIN 6' means that all references to 'PIN' in your code
+ * become '6' before compiling
+*/
 #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
   #include <avr/power.h>
@@ -37,7 +44,7 @@ void loop() {
   colorWipe(strip.Color(255, 0, 0), 50); // Red
   colorWipe(strip.Color(0, 255, 0), 50); // Green
   colorWipe(strip.Color(0, 0, 255), 50); // Blue
-  colorWipe(strip.Color(0, 0, 0, 255), 50); // White 
+  colorWipe(strip.Color(0, 0, 0, 255), 50); // White
   colorWipe(strip.Color(255, 255, 255, 255), 50); // All
   colorWipe(strip.Color(255, 255, 255, 255), 90); // All
   // fullWhite();
@@ -55,4 +62,3 @@ void colorWipe(uint32_t c, uint8_t wait) {
     delay(wait);
   }
 }
-
